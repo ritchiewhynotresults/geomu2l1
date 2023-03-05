@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry U2 lesson 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link 
+        href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <style type="text/css">
+        :root{
+            --font-one: 'Montserrat', sans-serif;
+            --font-two: 'Arvo', serif;
+        }
+        body {
+            font-family: var(--font-one);
+            font-size: 16px;
+            font-weight: 400;
+            background: #a7cfcd;
+            background-size: cover;
+        }   
+       /* h1, h2, h3, h4, h5, h6{
+            font-family: var(--font-two);
+        }
+
+        h1,
+        h2 {
+            font-weight: 700;
+        } */
+
+        #top1_content_one {
+            background: url('./Geom1S1CU2L1Header.png') no-repeat;
+            background-size: cover;
+            background-position: left;
+            /* position: relative; */
+            padding:90px;
+            box-shadow: -1px -8px 13px #8a4c5775;
+            -webkit-box-shadow: -1px -8px 13px #8a4c5775;
+            -moz-box-shadow: -1px -8px 13px #8a4c5775;
+            -o-box-shadow: -1px -8px 13px #8a4c5775;
+            height: 600px;
+        }
+        #top2_content_one {
+           background-color: #fff;
+           padding:50px;
+        }
+        #top3_content_one {
+           background-color: #d3e7e6;
+           padding:50px;
+        }
+        #top6_content_two {
+           background-color: #fff;
+           padding:50px;
+        }
+        #top6_content_one {
+           background-color: #027271;
+           padding:50px;
+        }
+        #section1{
+            background-color: #027271;
+        }
+        .sect1title{
+           font-family: var(--font-two);
+           font-size:6rem;
+           font-weight: bold;
+           color: #fff;
+           text-transform: uppercase;
+        }
+        .sect1subtitle{
+            font-size: 2.5rem;
+            margin-top: -40px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 600;
+            /* font-family: var(--font-two); */
+        }
+        .sec2title{
+            font-size: 2rem;
+            color: #027271;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .sec2-title{
+            background-color: #027271;
+            color:#fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .sec2-title2{
+            background-color: #4d9b9b;
+            color:#fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .sec2-title3{
+            background-color: #81b9b9;
+            color:#fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .sec2-text-cont-bg{
+            background-color: #4d9c9b;
+            padding: 15px;
+            height: 350px;
+        }
+        .sec2-text-cont-bg2{
+            background-color: #82b8b8;
+            padding: 15px;
+            height: 350px;
+        }
+        .sec2-text-cont-bg3{
+            background-color: #a6cdcd;
+            padding: 15px;
+            height: 350px;
+        }
+       .sec2-textcont{
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+       }
+       .sec2-list-text{
+        list-style: square;
+        font-size: 1.2rem;
+        color: #fff;
+       }
+       .sec3title{
+        font-size: 1.2rem;
+        font-weight: 600;
+       }
+       .sec3text{
+        font-size: 1.2rem;
+       }
+       .sec5text{
+        font-size:1.2rem;
+        color:#000;
+       }
+       .sec5textcon{
+        font-size:1.5rem;
+        color: #000;
+       }
+       .sec2-text-cont-bgdark{
+        background-color: #a7cfcd;
+        text-align: center;
+        padding: 10px;
+        height:100px
+       }
+       .sec6-text-cont-bgdark{
+        background-color: #a7cfcd;
+        padding: 10px;
+        height:100px;
+       }
+       .sec2-text-cont-bglight{
+        background-color: #c3dbda;
+        text-align: center;
+        padding: 10px;
+        height:100px
+       }
+       .sec6-text-cont-bglight{
+        background-color: #c3dbda;
+        padding: 10px;
+        height:80px;
+       }
+       .sect6title{
+        font-size:2rem;
+        font-weight: bold;
+        color:#fff;
+        text-transform: uppercase;
+        font-family: var(--font-two);
+       }
+       .sect6subtitle{
+        color:#fff;
+        font-size:1.2rem;
+        margin-top:10px;
+       }
+       .sec6text2{
+        font-size:1.2rem;
+        color:#000;
+        font-weight: 600;
+       }
+       .sec6bddark{
+        background-color: #a7cfcd;
+        padding:8px;
+        height:80px;
+       }
+       .sec6bddark2{
+        background-color: #c1dddd;
+        padding:8px;
+        height:80px;
+       }
+       .sec6bdlight{
+        background-color: #dceceb;
+        padding:8px;
+        height:80px;
+       }
+        .bg-black{
+            background-color: black;
+        }
+        input.is-invalid~.form-check-label{
+            text-decoration: line-through;
+        }
+    button[data-qs_count]{
+            border-radius: 0px 50rem 50rem 0px !important;
+            font-weight: 600;
+            text-transform: uppercase;
+    }
+    button[data-qs_count].glow-on-hover-success{
+        background: #6bc855!important;
+    }
+    button[data-qs_count].glow-on-hover-wrong{
+        background: var(--bs-danger)!important;
+    }
+    span.error_mes{
+        top: -16px;
+        font-size: 11px;
+        left: 19px;
+        z-index: 2;
+    }
+    </style>
+</head>
+
+<body>
+<div class="lesson_2">
+    <!-- section 1 -->
+    <section id="section1">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top1_content_one">
+                    <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-9" style="text-align: right;">
+                            <label class="sect1title">GEOMETRY</label>
+                             <label class="sect1subtitle">Basic Geometric proofs</label>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 2 -->
+    <section id="section2">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top2_content_one">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="sec2title">Basic geometric proofs</p>
+                        </div>
+                        <div class="col-lg-4 mt-4 p-1">
+                           <div class="sec2-title">What you should <br>know</div>
+                           <div class="sec2-text-cont-bg">
+                            <p class="sec2-textcont">Before you begin, you should:</p>
+                            <ul class="sec2-list-text">
+                                <li>If/Then statements</li>
+                                <li>The paragraph proof concept</li>
+                                <li>The two-column proof concept</li>
+                            </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 mt-4 p-1">
+                           <div class="sec2-title2">Lesson<br>expectations</div>
+                           <div class="sec2-text-cont-bg2">
+                            <p class="sec2-textcont">By the end of this lesson, you should be able to:</p>
+                            <ul class="sec2-list-text">
+                                <li>Identify basic geometric properties of points, lines, planes</li>
+                                <li>Apply geometric properties in two-column proofs.</li>
+                            </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 mt-4 p-1">
+                           <div class="sec2-title3">Lesson<br>keywords</div>
+                           <div class="sec2-text-cont-bg3">
+                            <p class="sec2-textcont">Postulate</p>
+                            <p class="sec2-list-text">Something that is accepted to be true.<br> Example: geometric definitions and vocabulary.</p>
+                            <p class="sec2-textcont">Theorem</p>
+                            <p class="sec2-list-text">Something that has to be proved, using postulates.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 3 -->
+    <section id="section3">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top3_content_one">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="sec3title">Postulates that deal with points, lines and planes.</p>
+                            <p class="sec3text">
+                                1. Though any two points, there is exactly one line.
+                            </p>
+                            <p class="sec3text">
+                                2. Through any three points not at the same line, there is exactly one plane.
+                            </p>
+                            <p class="sec3text">
+                                3. A line contains at least two points.
+                            </p>
+                            <p class="sec3text">
+                                4. A plane contains at least three points not on the same line.
+                            </p>
+                            <p class="sec3text">
+                                5. If two points line in a plane, then the entire line containing those points lies in that plane.
+                            </p>
+                            <p class="sec3text">
+                                6. If two lines intersect, then their intersection is exactly one point.
+                            </p>
+                            <p class="sec3text">
+                                7. If two planes intersect, then their intersection is a line.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                             <p class="sec3title">Postulates that deal with segments</p>
+                             <p class="sec3text">
+                                8. Ruler postulate:
+                            </p>
+                            <p class="sec3text">
+                                Given any two points A and B on a line, A corresponds to zero and B to a positive real number.
+                            </p>
+                            <p class="sec3text">That means that, if we take number line, and we place point A at 8 and point B at 15, point A corresponds to zero, and we count the units from 8 to 15, starting at 0 (point A), giving us as a result the distance between these points, which would be 7.</p>
+
+                            <img src="./Geom1S1CU2L1Image1.png" style="width:80%;text-align: center;margin:auto">
+
+                            <p class="sec3text mt-5">
+                                9. <b>Segment addition postulate:</b>
+                            </p>
+                            <p class="sec3text">
+                                If B is between  A and C, then AB + BC = AC. 
+                            </p>
+                            <p class="sec3text">
+                                That means that the sum of the two portions of the segments results in the entire segment 
+                            </p>
+
+                             <img src="./Geom1S1CU2L1Image2.png" class="mt-3" style="width:80%;text-align: center;margin:auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 4 -->
+    <section id="section4">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top2_content_one">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="sec2title">THEOREMS</p>
+                        </div>
+                       <p class="sec3text">
+                            <b>1. Midpoint theorem:</b>
+                        </p>
+                       <p class="sec3text">
+                            If M is the midpoint of segment AB, then segment AM is congruent to segment MB.
+                       </p>
+
+                        <img src="./Geom1S1CU2L1Image3.png" style="width:50%;margin:10px">
+
+                        <p class="sec3text">
+                            2. Segment congruence theorem says that if we have a segment AB, the following properties may be present:
+                        </p>
+
+                        <ul>
+                            <li class="sec3text"><b>Reflexive:</b> AB <span style="font-size:1.5rem">&#8773;</span> AB 
+                            <p>(segment AB is congruent to itself)</p>
+                            </li>
+                            <li class="sec3text"><b>Symmetric:</b>If AB <span style="font-size:1.5rem">&#8773;</span> CD, then CD  <span style="font-size:1.5rem">&#8773;</span>  AB
+                            <p>(If segement AB is congruent to segment CD, then segment CD is congruent to segment AB)</p>
+                            </li>
+                            <li class="sec3text"><b>Transitive:</b>If AB <span style="font-size:1.5rem">&#8773;</span> CD, and CD  <span style="font-size:1.5rem">&#8773;</span>  EF, then AB <span style="font-size:1.5rem">&#8773;</span> EF
+                            <p>(If segement AB is congruent to segment CD, then segment CD is congruent to segment EF, then segment AB is congruent to segment EF)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- section 5 -->
+    <section id="section5">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top3_content_one">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="sec2title">ACTIVITY 1</p>
+                            <p class="sec5text text-center">
+                                Application of postulates and theorems in a two-column proofs
+                            </p>
+                            
+                        </div>
+
+                        <div class="col-lg-6">
+                            <p class="sec5text">
+                                1. Create a two-column proof for the following statements:
+                            </p>
+                            <p class="sec5text">
+                                Given: 
+                                <ul style="list-style:none">
+                                    <li>AD <span style="font-size:1.5rem">&#8773;</span> CE</li>
+                                    <li>DB  <span style="font-size:1.5rem">&#8773;</span> EB </li>
+                                </ul>
+                            </p>
+                            <p class="sec5text">
+                                Prove: 
+                                <ul style="list-style:none">
+                                    <li>AB <span style="font-size:1.5rem">&#8773;</span> CB</li>
+                                </ul>
+                            </p>
+                            <p class="sec5text">
+                                 
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img src="./Geom1S1CU2L1Image4.png" style="width:50%">
+                        </div>
+
+                         <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Statements</div>
+                           <div class="sec2-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec5textcon">1.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;">
+                                        <li class="sec5textcon">AD <span style="font-size:1.5rem">&#8773;</span>  CE</li>
+                                        <li class="sec5textcon">DB <span style="font-size:1.5rem">&#8773;</span>  EB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec2-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec5textcon">2.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;">
+                                        <li class="sec5textcon">AD <span style="font-size:1.5rem">&#8773;</span>  CE</li>
+                                        <li class="sec5textcon">DB <span style="font-size:1.5rem">&#8773;</span>  EB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec2-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec5textcon">3.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;">
+                                        <li class="sec5textcon">AD + DB = CE + EB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec2-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec5textcon">4.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;">
+                                        <li class="sec5textcon">AD + DB = AB </li>
+                                        <li class="sec5textcon">CE + EB = CB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec2-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec5textcon">5.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;">
+                                        <li class="sec5textcon">AB = CB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec2-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec5textcon">6.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;">
+                                        <li class="sec5textcon">AB <span style="font-size:1.5rem">&#8773;</span> CB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+
+
+                        <div class="col-lg-6 mt-4 p-1">
+                            <div class="sec2-title">Reasons</div>
+                            <div class="sec2-text-cont-bgdark">
+                                <p class="sec5textcon">a.) Given</p>
+                            </div>
+                            <div class="sec2-text-cont-bglight">
+                               <div class="row">
+                                    <div class="col-lg-1">
+                                        <p class="sec6textcon">b.)</p>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-sm" id="quiz-answer7" data-ans="them">
+                                            <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="7" id="quiz-answer7btn" onclick="checkInputs(this)" type="button">Check</button>
+                                            <span id="quiz-answer-text7" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <div class="sec2-text-cont-bgdark">
+                                <p class="sec5textcon">c.) Addition property</p>
+                            </div>
+                            <div class="sec2-text-cont-bglight">
+                                <div class="row">
+                                    <div class="col-lg-1">
+                                        <p class="sec6textcon">d.)</p>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-sm" id="quiz-answer8" data-ans="them">
+                                            <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="8" id="quiz-answer8btn" onclick="checkInputs(this)" type="button">Check</button>
+                                            <span id="quiz-answer-text8" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <div class="sec2-text-cont-bgdark">
+                                <p class="sec5textcon">e.) Substitution</p>
+                            </div>
+                            <div class="sec2-text-cont-bglight">
+                                 <div class="row">
+                                    <div class="col-lg-1">
+                                        <p class="sec6textcon">f.)</p>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-sm" id="quiz-answer9" data-ans="them">
+                                            <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="9" id="quiz-answer9btn" onclick="checkInputs(this)" type="button">Check</button>
+                                            <span id="quiz-answer-text9" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <p class="sec5textcon">Select the correct answer:</p>
+
+                            <!-- <ul style="list-style:none">
+                                <li>a. Definition of congruent segments; addition property; segment addition postulate</li>
+                                <li>b. Definition of congruent segments; segment addition postulate; definition of congruent segments</li>
+                                <li>c. Addition property, segment addition postulate, definition of congruent segments</li>
+                            </ul> -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice1">
+                                <label class="form-check-label" for="practice1">a. Definition of congruent segments; addition property; segment addition postulate</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="yes" id="practice1">
+                                <label class="form-check-label" for="practice1">b. Definition of congruent segments; segment addition postulate; definition of congruent segments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice1">
+                                <label class="form-check-label" for="practice1">c. Addition property, segment addition postulate, definition of congruent segments</label>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- section 6 -->
+    <section id="section6">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top6_content_one">
+                    <div class="row">
+
+                        <div class="col-lg-12" style="text-align: center;">
+                            <label class="sect6title">Assignment 1</label><br>
+                            <label class="sect6subtitle">Write a two-column proof</label>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top6_content_two">
+                    <div class="row">
+                        <div class="col-lg-5">
+                         <p class="sec6text2">  1. Complete the chart </p>
+                          <p class="sec5text">
+                                Given: 
+                                <ul style="list-style:none">
+                                    <li>AB = 5x</li>
+                                    <li>BC = 2x - 4 </li>
+                                    <li>AC = 52</li>
+                                </ul>
+                            </p>
+                          <p class="sec5text">
+                                Prove: 
+                                <ul style="list-style:none">
+                                    <li>x = 8</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="./Geom1S1CU2L1Image5.png" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="sec6text2">Word bank</p>
+                        </div>
+                        <div class="col-lg-4 sec6bddark">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <label class="sec5text text-center">x = 8</label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer1" data-ans="S6">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="1" id="quiz-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4 sec6bddark2">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <label class="sec5text text-center">7x=56</label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer2" data-ans="S4">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="2" id="quiz-answer2btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text2" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 sec6bdlight">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <label class="text-center">Division property</label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer3" data-ans="R5">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="3" id="quiz-answer3btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text3" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-4 sec6bddark">
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <label class="text-center">Simplify</label>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-sm" id="quiz-answer4" data-ans="R6">
+                                            <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="4" id="quiz-answer4btn" onclick="checkInputs(this)" type="button">Check</button>
+                                            <span id="quiz-answer-text4" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sec6bddark2">
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <label class="text-center">Addition property</label>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-sm" id="quiz-answer5" data-ans="R3">
+                                            <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="5" id="quiz-answer5btn" onclick="checkInputs(this)" type="button">Check</button>
+                                            <span id="quiz-answer-text5" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sec6bdlight">
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <label class="text-center">5x+2x-4=52</label>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-sm" id="quiz-answer1" data-ans="S2">
+                                            <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="6" id="quiz-answer6btn" onclick="checkInputs(this)" type="button">Check</button>
+                                            <span id="quiz-answer-text6" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Statements</div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">1.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AB = 5x</li>
+                                        <li class="sec6textcon">BC = 2X -4</li>
+                                        <li class="sec6textcon">AC = 52</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">2.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                   <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer10" data-ans="5x+2x-4=52">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="10" id="quiz-answer10btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text10" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">3.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">7X-4+4=52+4</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">4.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer11" data-ans="7x=56">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="11" id="quiz-answer11btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text11" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">5.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">7X / = 56 / 7</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">6.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer12" data-ans="x = 8">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="12" id="quiz-answer12btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text12" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Reasons</div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">1.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Given</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">2.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                  <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Distributive</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">3.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer13" data-ans="Addition property">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="13" id="quiz-answer13btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text13" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">4.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Simplify</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">5.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer14" data-ans="Division property ">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="14" id="quiz-answer14btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text14" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">6.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer15" data-ans="Simplify">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="15" id="quiz-answer15btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text15" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                         <p class="sec6text2">  2.  Complete the chart. Fill in each missing step. </p>
+                          <p class="sec5text">If AB = CD, then AC = BD.</p>
+                        </div>
+                        <div class="col-lg-8">
+                          <img src="./Geom1S1CU2L1Image6.png" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                         <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Statements</div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">1.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AB = CD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">2.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                  <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AB+BC = BC+CD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">3.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AB+BC=AC</li>
+                                        <li class="sec6textcon">BC+CD=BD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">4.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AC = BD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Reasons</div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">1.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Given</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">2.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                   <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer" data-ans="them">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="1" id="quiz-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">3.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Segment addition postulate</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">4.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer1" data-ans="them">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="1" id="quiz-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                                <label class="form-check-label" for="practice2">a. Segment addition postulate, reflexive property </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                                <label class="form-check-label" for="practice2">b. Segment addition postulate; substitution</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                                <label class="form-check-label" for="practice2">c. Addition property; segment addition postulate</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                                <label class="form-check-label" for="practice2">d. Addition property; Substitution</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- section 7 -->
+    <section id="section7">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top6_content_one">
+                    <div class="row">
+
+                        <div class="col-lg-12" style="text-align: center;">
+                            <label class="sect6title">Assignment 2</label><br>
+                            <label class="sect6subtitle">Write a two-column proof</label>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1">
+                <div id="top6_content_two">
+                    <div class="row">
+                        <div class="col-lg-5">
+                         <p class="sec6text2">  1. Complete the chart </p>
+                          <p class="sec5text">
+                                Given: 
+                                <ul style="list-style:none">
+                                    <li>CD <span style="font-size:1.5rem">&#8773;</span>  CE</li>
+                                    <li>DA <span style="font-size:1.5rem">&#8773;</span>  EB </li>
+                                    <li>AC <span style="font-size:1.5rem">&#8773;</span>  BC</li>
+                                </ul>
+                            </p>
+                          <p class="sec5text">
+                                Prove: 
+                                <ul style="list-style:none">
+                                    <li>AC <span style="font-size:1.5rem">&#8773;</span>  BC</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="./Geom1S1CU2L1Image7.png" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Statements</div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">1.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">CD <span style="font-size:1.5rem">&#8773;</span> CE</li>
+                                        <li class="sec6textcon">DA <span style="font-size:1.5rem">&#8773;</span> EB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">2.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                  <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">CD = CE</li>
+                                        <li class="sec6textcon">DA = EB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">3.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">CD+DA=CE+EB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">4.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">CD+DA=AC</li>
+                                        <li class="sec6textcon">CE+EB=BC</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">5.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AC = CB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">6.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">AC <span style="font-size:1.5rem">&#8773;</span> CB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 mt-4 p-1">
+                           <div class="sec2-title">Reasons</div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">a.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Given</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">b.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                 <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer1" data-ans="them">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="1" id="quiz-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">c.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Addition property</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                           <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">d.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer1" data-ans="them">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="1" id="quiz-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bgdark">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">e.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                    <ul style="list-style: none;margin-bottom: 0px;">
+                                        <li class="sec6textcon">Substitution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="sec6-text-cont-bglight">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <p class="sec6textcon">f.)</p>
+                                </div>
+                                <div class="col-lg-11">
+                                     <div class="input-group">
+                                        <input type="text" class="form-control form-control-sm" id="quiz-answer1" data-ans="them">
+                                        <button class="btn text-white bg-black" data-error_counter="3" data-qs_count="1" id="quiz-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                        <span id="quiz-answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice3">
+                                <label class="form-check-label" for="practice3">a. Definition of congruent segments; addition property; segment addition postulate </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="yes" id="practice3">
+                                <label class="form-check-label" for="practice3">b. Definition of congruent segments; segment addition postulate; definition of congruent segments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" data-value="no" id="practice3">
+                                <label class="form-check-label" for="practice3">c. Addition property, segment addition postulate, definition of congruent segments</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+</div> 
+    <!-- js functions -->
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script>
+         function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-answer${answerNumber}`
+            const selectorStringButton = `quiz-answer${answerNumber}btn`
+            const selectorStringAnswer = `quiz-answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            // const answer2 = quizTwoAnswer.getAttribute('data-ans2')
+            // const answer3 = quizTwoAnswer.getAttribute('data-ans3')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+        // =============
+         const checkList10 = document.querySelectorAll('#practice1,#practice2,#practice3,#practice4,#practice5');
+
+        checkList10.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+        // ==========================
+         
+    </script>
+</body>
+</html>
